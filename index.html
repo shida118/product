@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.style.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    
+</head>
+<body>
+
+<header>
+	<div class="head">
+		<div class="head1 fix container">
+			<div class="head2 fl"><a href="#"><img src="images/logo1.jpg"></a></div>
+			<a href="#" class="fr"><img src="images/logo2.jpg"></a>
+		</div>
+	</div>	
+</header>
+<div>
+	<ul id="nav" class="nav clearfix">
+	    <li class="nLi">
+			<h3><a href="#" target="_blank">网站首页</a></h3>
+		</li>
+		<li class="nLi on">
+			<h3><a href="#" target="_blank">关于紫馨康</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<!-- 假设当前频道为“预告片”，手动或后台程序添加titOnClassName类名（默认是'on'），相当于设置参数defaultIndex:1。若同时设置参数returnDefault:true，则鼠标移走后0.3秒返回当前频道 -->
+			<h3><a href="#" target="_blank">一诺商学院</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+			    <li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+		    </ul>
+		</li>
+		<li class="nLi ">
+			<h3><a href="#" target="_blank">品牌产品</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<h3><a href="#" target="_blank">公益+</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<h3><a href="#" target="_blank">互联网+ </a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<h3><a href="#" target="_blank">新闻中心</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<h3><a href="#" target="_blank">资料下载 </a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+		<li class="nLi">
+			<h3><a href="#" target="_blank">联系我们</a></h3>
+			<ul class="sub">
+				<li><a href="#">新闻首页</a></li>
+				<li><a href="#">新闻人物</a></li>
+				<li><a href="#">新闻电视</a></li>
+				<li><a href="#">新闻图片</a></li>
+				<li><a href="#">新闻视频</a></li>
+				<li><a href="# ">新闻专题</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script id="jsID" type="text/javascript">
+			
+	jQuery("#nav").slide({ 
+		type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nLi", //鼠标触发对象
+		targetCell:".sub", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:300 , //效果时间
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+</script>
+<div class="banner">
+    <div class="flexslider">
+        <ul class="slides">
+            <li style="background:url(images/logo3.jpg) 50% 0 no-repeat;"><a href="#" title=""></a></li>
+            <li style="background:url(images/logo3.jpg) 50% 0 no-repeat;"><a href="#" title=""></a></li>
+            <li style="background:url(images/logo3.jpg) 50% 0 no-repeat;"><a href="#" title=""></a></li>
+        </ul>
+    </div>
+    <script src="js/bannertab.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.flexslider').flexslider({
+                directionNav: true,
+                pauseOnAction: false
+            });
+        });
+    </script>
+</div>
+
+<div class="nex container">
+    <div class="fix">
+        <div class="nex1 fl fix">
+            <div class="nex1-1 fix">
+                <a href="#" class="fl"><img src="images/img.jpg"> </a>
+                <span><a href="#">更多</a></span>
+            </div>
+           <!-- <div class="nex1-2 fl"><a href="#"><img src="images/img2.jpg"> </a></div>-->
+            <div id="slide" class="slide fl">
+				<div class="hd">
+					<ul><li></li><li></li><li></li><li></li><li></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li><a href="#" target="_blank"><img src="images/img2.jpg" /></a></li>
+						<li><a href="#" target="_blank"><img src="images/img2.jpg" /></a></li>
+						<li><a href="#" target="_blank"><img src="images/img2.jpg" /></a></li>
+						<li><a href="#" target="_blank"><img src="images/img2.jpg" /></a></li>
+						<li><a href="#" target="_blank"><img src="images/img2.jpg" /></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		<script type="text/javascript">
+		jQuery(".slide").slide({mainCell:".bd ul",autoPlay:true});
+		</script>
+            <div class="nex1-5 fr">
+                <span class="nex1-3"><a href="#">全面启动资本战略 加速国际化产业布局</a></span>
+                <span class="nex1-4">企业作为一种典型的经营性组织，要想在复杂、多变、极富挑战的竞争环境中不断发展壮大，就必须对自己的经营行为进行统筹、谋划未来资本大战略…</span>
+                <span class="nex1-6"></span>
+                <div class="nex1-8">
+                    <ul>
+                        <li class="fix"><a href="#" class="fl">紫馨康集团党总支部再次被授予“先进基层党组织”称号，紫馨康合唱队在…</a><span class="fr">2015-02-12</span></li>
+                        <li class="fix"><a href="#" class="fl">紫馨康集团党总支部再次被授予“先进基层党组织”称号，紫馨康合唱队在…</a><span class="fr">2015-02-12</span></li>
+                        <li class="fix"><a href="#" class="fl">紫馨康集团党总支部再次被授予“先进基层党组织”称号，紫馨康合唱队在…</a><span class="fr">2015-02-12</span></li>
+                        <li class="fix"><a href="#" class="fl">紫馨康集团党总支部再次被授予“先进基层党组织”称号，紫馨康合唱队在…</a><span class="fr">2015-02-12</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nex2 fr">
+            <div class="nex2-1 fix">
+                <a href="#" class="fl"><img src="images/img4.jpg"></a>
+                <span class="fr"></span>
+            </div>
+            <div class="fix">
+                <div class="nex2-2 fl"><a href="#"><img src="images/img5.jpg"></a></div>
+                <div class="nex2-3 fr">
+                    <p class="fix">河北紫馨康电子商务有限公司是一家经河北政府工商注册批准成立的集电子商务、日用品、护肤品... <a href="#" class="fr">[查看详细]</a></p>
+                </div>
+            </div>
+            <div class="nex3">
+                <ul class="fix">
+                    <li><a href="#"><img src="images/img6.jpg"> 企业荣誉</a></li>
+                    <li><a href="#"><img src="images/img6.jpg">企业荣誉</a></li>
+                    <li><a href="#"><img src="images/img6.jpg">企业荣誉</a></li>
+                    <li><a href="#"><img src="images/img6.jpg">企业荣誉</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dus">
+        <ul class="fix">
+            <li>
+                <div class="duiwe2">
+                    <div class="nex1-1 duei fix">
+                        <a href="#" class="fl"><img src="images/img8.jpg"> </a>
+                        <span class="diw3"><a href="#">更多</a></span>
+                    </div>
+                    <div class="dus1">
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="duiwe1">
+                    <div class="nex1-1 duei1 fix">
+                        <a href="#" class="fl"><img src="images/img9.jpg"> </a>
+                        <span class="diw"><a href="#">更多</a></span>
+                    </div>
+                    <div class="dus1">
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="duiwe">
+                    <div class="nex1-1 duei2 fix">
+                        <a href="#" class="fl"><img src="images/img10.jpg"> </a>
+                        <span class="diw1"><a href="#">更多</a></span>
+                    </div>
+                    <div class="dus1">
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                        <a href="#">脸轮廓变化看起来衰老10岁</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="cup">
+    	<div class="cup1 fix">
+    		<a href="#" class="fl"><img src="images/img11.jpg"></a>
+    		<span><a href="#" class="fr">更多</a></span>
+    	</div>
+    	<ul class="fix">
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img12.jpg"></a>
+    			<span><a href="#">护肤产品</a></span>
+    		</li>
+    	</ul>
+    </div>
+    <div class="lij mt25">
+    	<div class="cup1 diswr fix">
+    		<a href="#" class="fl"><img src="images/img13.jpg"></a>
+    		<span class="dso fr"></span>
+    	</div>
+    	<!-- <ul class="fix">
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    		<li>
+    			<a href="#"><img src="images/img14.jpg"></a>
+    		</li>
+    	</ul> -->
+        <div class="picMarquee-left">
+            <div class="bd">
+                <ul class="picList">
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href=""><img src="images/img14.jpg" /></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+        jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:13,interTime:120});
+        </script>
+    </div>
+</div>
+
+<footer> 
+    <div class="foot">
+        <div class="foot1 auto">
+            <ul class="fix">
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">关于紫馨康</a></li>
+                <li><a href="#">一诺商学院</a></li>
+                <li><a href="#">品牌产品</a></li>
+                <li><a href="#">公益+</a></li>
+                <li><a href="#">互联网+</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li><a href="#">资料下载</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot2 fix">
+        <div class="container fix">
+            <div class="font_left fl fix">
+                <div class="font_left1 fl">
+                    <a href="#"><img src="images/logo5.jpg"> </a>
+                </div>
+                <div class="font_left1 fl">
+                    <p class="font_left1-1">
+                        <span class="font-01">法律声明  Copyright   紫馨康 版权所有 <em class="n">冀ICP备58793521号</em></span>
+                        <span class="font-02">地址：河北漳河生态科技园区<em class="n"> 邮箱：shichangbu@126.com</em><em class="n">电话：18031110127</em></span>
+                    </p>
+                </div>
+            </div>
+            <div class="font_right fr">
+                <a href="#"><img src="images/logo6.jpg"></a>
+                <span>紫馨康微信公众号</span>
+            </div>
+        </div>
+    </div>
+	
+</footer>
+
+</body>
+</html>
+
+       
